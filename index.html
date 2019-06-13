@@ -8,13 +8,36 @@
     <link type="stylesheet" href="style.css">
     <title>Giphy Assignment</title>
 </head>
+<style>
+* {
+    font-family: monospace;
+}
+button {
+    background-color: darkorange;
+    border: gray;
+    font-size: medium;
+    height: 25px;
+    width: 70px;
+    margin: 5px;
+}
+input {
+    background-color: aliceblue;
+}
+h1, form, #buttons-view {
+    text-align: center;
+    padding: 10px;
+}
+label {
+    font-size: larger;
+}
 
+</style>
 <body>
     <h1>Emotional Rollercoaster</h1>
     <form id="search-form">
-    <label for="user-input">Add your emotion to this coaster:</label>
-        <input type="text" id="emotion-input"><br>
-        <input id="add-emotion" type="submit" value="Search an emotion">
+    <label for="user-input">Contribute to the hot mess and add an emotion:</label>
+        <input type="text" id="emotion-input">
+        <input id="add-emotion" type="submit" value="Search">
     </form>
     <div id="buttons-view">
         <button data-emotion="happy">happy</button>
@@ -22,7 +45,6 @@
         <button data-emotion="angry">angry</button>
     </div>
     <div id="gifs-appear-here"></div>
-
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

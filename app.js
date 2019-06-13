@@ -1,6 +1,5 @@
-var topics = [ "happy", "sad", "angry"]; //not currently linking
 
-$("button").on("click", function () {
+$("#buttons-view").on("click", "button", function () {
     var topics = $(this).attr("data-emotion");
 
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
@@ -27,34 +26,28 @@ $("button").on("click", function () {
     });
 
 });
-function renderButtons() {
-    // $("#buttons-view").empty();
-    for (var i = 0; i < topics.length; i++) {
-        var a = $("<button>");
-        a.addClass("emotion");
-        a.attr("data-emotion", topics[i]);
-        a.text(topics[i]);
-        $("#buttons-view").append(a);
-    }
-}
-
-// function alertEmotion() {
-//     var emotionName = $(this).attr("data-emotion");
-//     alert(emotionName);
-// }
-
 
 $("#add-emotion").on("click", function (event) {
     event.preventDefault();
     var emotion = $("#emotion-input").val().trim();
     var newButton = $("<button>").text(emotion);
-    // emotion = $("<button>").text(emotion);
     newButton.attr("data-emotion", emotion);
     $("#buttons-view").append(newButton);
-    // topics.push(emotion);
-    // renderButtons();
-    
-})
-// $(document).on("click", ".emotion", alertEmotion);
+    // $(emotion).empty();
 
-// renderButtons();
+})
+
+
+
+// $("div").on("click", function() {
+    
+//     var state = $(this).attr("data-state"); 
+//     var stillURL = $(this).attr("data-still");
+//     var animateURL = $(this).attr("data-animate");
+
+//     if (state === "still") {
+//       $(this).attr("src", animateURL).attr("data-state", "animate");
+//     } else{
+//       $(this).attr("src", stillURL).attr("data-state", "still");
+//     }
+//   });
