@@ -30,6 +30,11 @@ h1, form, #buttons-view {
 label {
     font-size: larger;
 }
+#gifs-appear-here {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
 </style>
 <body>
@@ -37,7 +42,7 @@ label {
     <form id="search-form">
     <label for="user-input">Contribute to the hot mess and add an emotion:</label>
         <input type="text" id="emotion-input">
-        <input id="add-emotion" type="submit" value="Search">
+        <input id="add-emotion" type="submit" value="Add">
     </form>
     <div id="buttons-view">
         <button data-emotion="happy">happy</button>

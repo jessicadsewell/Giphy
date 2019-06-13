@@ -19,6 +19,8 @@ $("#buttons-view").on("click", "button", function () {
             var p = $("<p>").text("Rating: " + rating);
             var emotionImage = $("<img>");
             emotionImage.attr("src", results[i].images.fixed_height.url);
+            emotionImage.attr("data-still", results[i].images.fixed_height_still.url);
+            emotionImage.attr("data-animate", results[i].images.fixed_height.url);
             emotionDiv.append(p);
             emotionDiv.append(emotionImage);
             $("#gifs-appear-here").prepend(emotionDiv);
@@ -33,21 +35,21 @@ $("#add-emotion").on("click", function (event) {
     var newButton = $("<button>").text(emotion);
     newButton.attr("data-emotion", emotion);
     $("#buttons-view").append(newButton);
-    // $(emotion).empty();
+    $("#emotion-input").val('');
 
 })
 
 
 
-// $("div").on("click", function() {
+$("#gifs-appear-here").on("click", "img", function() {
     
-//     var state = $(this).attr("data-state"); 
-//     var stillURL = $(this).attr("data-still");
-//     var animateURL = $(this).attr("data-animate");
+    var state = $(this).attr("data-state"); 
+    var stillURL = $(this).attr("data-still");
+    var animateURL = $(this).attr("data-animate");
 
-//     if (state === "still") {
-//       $(this).attr("src", animateURL).attr("data-state", "animate");
-//     } else{
-//       $(this).attr("src", stillURL).attr("data-state", "still");
-//     }
-//   });
+    if (state === "still") {
+      $(this).attr("src", animateURL).attr("data-state", "animate");
+    } else{
+      $(this).attr("src", stillURL).attr("data-state", "still");
+    }
+  });
