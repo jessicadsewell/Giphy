@@ -1,7 +1,11 @@
 # Giphy
 
-* Page will display 3 default emotions (happy, sad and angry) that will all display gifs of the associated emotion upon click.
+**Instructions**
 
-* To add an emotion, the user will enter text into the input field. This will then create a button labeled as they typed.
+In this application, the user will be able to select the default emotions (happy, sad and angry) that will all display gifs related to the type of emotion. 
 
-* If the user clicks the button they create, gifs will appear associated with that emotion.
+To add an emotion, the user will enter in the input field. This will then create a button labeled with their search.
+
+If the user clicks the button they create, the most relevant gifs will appear associated with that emotion.
+
+Once the page is refreshed, the page will default back to the the three original default emotions. 
